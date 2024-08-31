@@ -1,12 +1,18 @@
 ---
 import Footer from "../components/elements/Footer.astro";
 import Navbar from "../components/elements/Navbar.astro";
+import {SEO} from "astro-seo";
 
 export interface Props {
   title: string;
+  value: string;
 }
 
 const { title } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
+console.log(canonicalURL)
+const resolvedImageWithDomain = new URL("/images/cooroora-pic.webp", Astro.site).toString()
+
 ---
 
 <!DOCTYPE html>
@@ -14,19 +20,43 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/cooroora-pic.webp" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="AgenceX - SEO Agency website landing page made with ASTROJS and TAILWINDCSS">
-    <title>AgenceX - {title}</title>
+
+    <SEO
+    description="Hinterland Web offers world class web design for local businesses in Pomona, Noosa Hinterland and all the Sunshine Coast. We simplify the process of getting your business online. Collaborate directly with Andre for a personalised approach and capitalise on the revenue streams the internet can create for your business. Contact us now."
+    canonical={canonicalURL}
+    openGraph={{
+      basic: {
+        title: "Hinterland Web",
+        type:"website",
+        image: resolvedImageWithDomain,
+        url: canonicalURL,
+      },
+    }}
+    extend={{
+      meta: [
+        {name: "keywords", content:"web design, website builder, SEO, sunshine coast web design, websites, web agency in Noosa, affordable websites in noosa, world class web design, website, websites near me, web design expert, web developer, pomona web developer, web design Pomona, website development Noosa, local business online presence, affordable web design sunshine coast, professional website services, Hinterland Web portfolio, mobile-friendly websites, custom web solutions, website testimonials, web design pricing, logo design Noosa, branding services Pomona, visual identity solutions, creative graphic design, brand development, bespoke logo creation, business branding, Hinterland Web  portfolio, graphic design testimonials"}
+      ]
+    }}
+    />
+    
+    
+    <meta name='impact-site-verification' content='40885628-69a1-4177-9671-d7fa6a7769f3'>
+    <title>{title}</title>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
     <Navbar />
     <slot />
     <Footer />
+    
   </body>
   <script>
     const switchTheme = document.querySelector(
@@ -113,25 +143,25 @@ const { title } = Astro.props;
 </html>
 <style is:global>
   :root {
-    --color-bg: 255 255 255;
-    --color-border: 255 255 255;
-    --color-box: 255 255 255;
-    --box-border: 229 231 235;
-    --box-sd: 226 232 240 / 0.5;
-	--heading-1:  23 37 84;
-	--heading-2: 31 41 55;
-	--heading-3: 55 65 81;
+    --color-bg: 216 229 207;
+    --color-border: 216 229 207;
+    --color-box: 216 229 207;
+    --box-border: 20 49 68;
+    --box-sd: 20 49 68 / 0.5;
+	--heading-1:  20 49 68;
+	--heading-2: 20 49 68;
+	--heading-3: 20 49 68;
   }
 
   .dark {
-    --color-bg: 3 7 18;
+    --color-bg: 20 49 68;
     --color-box: 17 24 39;
     --box-border: 243 244 246/0.1;
     --box-sd: transparent;
 
 	
-	--heading-1:  255 255 255;
-	--heading-2:  243 244 246;
+	--heading-1:  216 229 207;
+	--heading-2:  216 229 207;
 	--heading-3:  209 213 219;
   }
 
@@ -141,6 +171,10 @@ const { title } = Astro.props;
   body {
     font-family: "Raleway", sans-serif;
   }
+
+  img {
+        content-visibility: auto;
+      }
 
   [data-toggle-nav][data-open-nav="true"] #line1 {
     transform: translateY(0.375rem) rotate(40deg);

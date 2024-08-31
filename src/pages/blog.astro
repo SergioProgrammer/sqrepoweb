@@ -1,0 +1,79 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/sections/container.astro";
+import Sectionhead from "../components/sections/sectionhead.astro";
+import Title from "../components/shared/Title.astro";
+import Paragraph from "../components/shared/Paragraph.astro";
+import Subtitle from "../components/shared/Subtitle.astro";
+
+// Filter blog entries with 'draft: false' & date before current date
+const publishedBlogEntries = await getCollection("blog", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date
+publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+---
+
+<Layout title="Blog" value="blog">
+  <Container>
+    <Sectionhead>
+      <Title slot="title">Welcome to Our Blog</Title>
+      <Paragraph slot="desc">
+        This is a collection of article that intend to clarify all thing about building an online presence
+      </Paragraph>
+    </Sectionhead>
+    <main class="mt-16">
+      <ul class="grid gap-16 max-w-4xl mx-auto">
+        {
+          publishedBlogEntries.map((blogPostEntry, index) => (
+            <li>
+              <a href={`/blog/${blogPostEntry.slug}`}>
+                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+                  <img
+                    src={blogPostEntry.data.image.src}
+                    alt={blogPostEntry.data.image.alt}
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    width={430}
+                    height={240}
+                    loading={index <= 2 ? "eager" : "lazy"}
+                    decoding={index <= 2 ? "sync" : "async"}
+                    class="w-full rounded-md object-cover object-center bg-white"
+                  />
+                  <div>
+                    <span class="text-primary uppercase tracking-wider text-sm font-medium">
+                      {blogPostEntry.data.category}
+                    </span>
+
+                    <Subtitle class="leading-snug tracking-tight mt-1 ">
+                      {blogPostEntry.data.title}
+                    </Subtitle>
+                    
+
+                    <div class="flex gap-2 mt-3">
+                      <span class="text-gray-500">
+                        {blogPostEntry.data.author}
+                      </span>
+                      <span class="text-gray-500">• </span>
+                      <time
+                        class="text-gray-500"
+                        datetime={blogPostEntry.data.publishDate.toISOString()}>
+                        {blogPostEntry.data.publishDate.toDateString()}
+                      </time>
+                    </div>
+                    <Paragraph>{blogPostEntry.data.snippet}</Paragraph>
+                  </div>
+                
+                
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>

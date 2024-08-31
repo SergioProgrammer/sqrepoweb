@@ -3,42 +3,46 @@ import GroupFooterNav from "../blocks/GroupFooterNav.astro";
 import Container from "../shared/Container.astro";
 import FooterNav from "../shared/FooterNav.astro";
 import Paragraph from "../shared/Paragraph.astro";
-const footerNav1 = [
-    {
-        itemText:"Marketing",
-        itemLink:"#"
-    },
-    {
-        itemText:"Analylitics",
-        itemLink:"#"
-    },
-    {
-        itemText:"Commerce",
-        itemLink:"#"
-    },
-    {
-        itemText:"Insights",
-        itemLink:"#"
-    }
-]
+
+import Button from "../shared/Button.astro";
+// const footerNav1 = [
+//     {
+//         itemText:"Marketing",
+//         itemLink:"#"
+//     },
+//     {
+//         itemText:"Analylitics",
+//         itemLink:"#"
+//     },
+//     {
+//         itemText:"Commerce",
+//         itemLink:"#"
+//     },
+//     {
+//         itemText:"Insights",
+//         itemLink:"#"
+//     }
+// ]
 
 const footerSupport = [
+    // {
+    //     itemText:"Pricing",
+    //     itemLink:"#cta"
+    // },
+    // {
+    //     itemText:"Guides",
+    //     itemLink:"#"
+    // },
+    // {
+    //     itemText:"FAQ",
+    //     itemLink:"#cta"
+    // },
+    
     {
-        itemText:"Pricing",
-        itemLink:"#"
+        itemText:"FAQs",
+        itemLink:"/faq"
     },
-    {
-        itemText:"Guides",
-        itemLink:"#"
-    },
-    {
-        itemText:"FAQ",
-        itemLink:"#"
-    },
-    {
-        itemText:"Contact",
-        itemLink:"#"
-    }
+    
 ]
 
 const footerCompany = [
@@ -48,20 +52,21 @@ const footerCompany = [
     },
     {
         itemText:"Blog",
-        itemLink:"#"
+        itemLink:"/blog"
     },
-    {
-        itemText:"Jobs",
-        itemLink:"#"
-    },
-    {
-        itemText:"Parteners",
-        itemLink:"#"
-    },
-    {
-        itemText:"Jobs",
-        itemLink:"#"
-    }
+    // {
+    //     itemText:"Terms",
+    //     itemLink:"#"
+    // }
+    // {
+    //     itemText:"Jobs",
+    //     itemLink:"#"
+    // },
+    // {
+    //     itemText:"Parteners",
+    //     itemLink:"#"
+    // },
+  
 ]
 const footerLegal = [
     {
@@ -77,10 +82,14 @@ const footerLegal = [
         itemLink:"#"
     }
 ]
+
+const paragraphProps={
+    smallerFont:"text-sm"
+}
 ---
 <div class="mt-16"></div>
-<footer class="relative  bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-28 rounded-t-3xl">
-    <div class="absolute right-0 top-0 h-full w-full flex justify-end">
+<footer class="absolute w-full bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-10 rounded-t-3xl">
+    <!-- <div class="absolute right-0 top-0 h-full w-full flex justify-end">
         <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
             <span
               class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
@@ -92,9 +101,9 @@ const footerLegal = [
               class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
             ></span>
           </div>
-      </div>
-
-      <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
+      </div> -->
+<!-- 
+      <div class="absolute left-0 bottom-36 h-full w-full flex items-end">
         <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
             <span
               class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
@@ -106,14 +115,22 @@ const footerLegal = [
               class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
             ></span>
           </div>
-      </div>
+      </div> -->
     <Container className="pb-8 relative overflow-auto">
         
         <span class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary"></span>
         <div class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative">
             <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
                 <div class="h-full">
-                    <a href="#" class="relative flex items-center gap-3">
+                    
+                        
+                            <div class="inline-flex font-semibold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">
+                                Hinterland Web
+                            </div>
+                            
+                        </a>
+                    
+                    <!-- <a href="#" class="relative flex items-center gap-3">
                         <div class="relative w-7 h-7 overflow-auto flex rounded-xl">
                             <span class="absolute w-4 h-4 -top-1 -right-1 bg-green-500 rounded-md rotate-45"></span>
                             <span class="absolute w-4 h-4 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"></span>
@@ -123,14 +140,24 @@ const footerLegal = [
                         <div class="inline-flex text-lg font-semibold text-heading-1">
                             AgenceX
                         </div>
-                    </a>
-                    <Paragraph className={"mt-8"}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, maiores nam doloribus id magni
+                    </a> -->
+                    <Paragraph className={"mt-1"}>
+                        Made with ❤️ in Pomona. Send us an
                     </Paragraph>
-                </div>
+                    <Paragraph className={"mt-2"}>
+                        <a href="mailto:hello@hinterlandweb.com?subject=Enquiry%20about%20your%20services">
+                        <Button variant="primary">
+                            <span class="text-white text-lg relative z-[5]">Email</span>
+                        </a>
+                    </Paragraph>
+                    <Paragraph className={"mt-2"} isSmallText={true}>
+                       We acknowledge the Kabi Kabi people, the Traditional Custodians of the land upon which we stand. We pay our respects to their Elders, past and present.
+                    </Paragraph>
+                 
+               
 
                 <!-- social links -->
-                <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
+                <!-- <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
                     <a href="#" class="transition hover:text-heading-1 hover:scale-105">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -158,30 +185,33 @@ const footerLegal = [
                         </svg>
                         <span class="sr-only">social link</span>
                     </a>
-                </div>
+                </div> -->
             </div>
+        </div>
 
             <GroupFooterNav>
+               
+                <FooterNav title={"Support"} navItems={footerSupport}/>
                 <FooterNav title={"Company"} navItems={footerCompany}/>
-                <FooterNav title={"Solutions"} navItems={footerNav1}/>
+            
             </GroupFooterNav>
 
             <GroupFooterNav>
-                <FooterNav title={"Support"} navItems={footerSupport}/>
-                <FooterNav title={"Ressources"} navItems={footerLegal}/>
+               
+                
+                
             </GroupFooterNav>
 
         </div>
+    
     </Container>
     <div class=" bg-gradient-to-tl from-box-bg py-2 relative">
         <Container>
-            <div class="flex justify-between items-center gap-6 md:text-lg text-heading-3">
+            <div class="flex justify-center content-center items-center gap-6 md:text-lg text-heading-3">
                 <div>
-                    &copy; <span id="year"></span> AgenceX. All right reserved
-                </div>
-                <div>
-                    Proudly made by <a href="https://github.com/johnkat-mj" target="_blank" class="font-semibold">John Kat</a>
-                </div>
+                     <span id="year"></span> &copy; 2024 Hinterland Web. All rights reserved.
+                    </div>
+                
             </div>
         </Container>
     </div>

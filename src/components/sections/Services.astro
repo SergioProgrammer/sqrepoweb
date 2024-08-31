@@ -3,13 +3,14 @@ import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-import { services } from "../../utils/data.ts";
+import { services } from "../../utils/data";
 
 
 type ServicesProps = {
     title: string;
     description: string;
-    icon: string
+    icon: string;
+    url?:string;
 };
 
 
@@ -22,14 +23,14 @@ type ServicesProps = {
                 What we offer
             </Title>
             <Paragraph>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Be it simple or complex, our focus is on effective solutions that help <br><strong>you and your business to grow</strong>.
             </Paragraph>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {
                     services.map((service: ServicesProps) => {
                     return (
-                            <Service title={service.title} description={service.description} icon={service.icon}>
+                            <Service title={service.title} description={service.description} icon={service.icon} url={service.url}>
                             </Service>
                             );
                     })
