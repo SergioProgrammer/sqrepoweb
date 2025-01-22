@@ -2,9 +2,11 @@
 import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
 
+// Supongamos que tienes una variable `isNormalMode` que indica si el modo normal está activado
+const isNormalMode = true; // Cambia esto según tu lógica
 ---
 
-<section>
+<section class={isNormalMode ? 'normal-mode' : ''}>
     <Container className="space-y-8">
         <div class="text-center max-w-3xl mx-auto">
             <Title>
@@ -33,7 +35,6 @@ import Title from "../shared/Title.astro";
             <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group">
                 <img src="/logos/7.svg" width="100" height="60" alt="spotify" class="h-7 sm:h-10 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
             </div>
-           
         </div>
     </Container>
 </section>
