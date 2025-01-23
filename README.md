@@ -1,53 +1,32 @@
-<h1>AgenceX Landing page</h1>
+Sitio web de SQ desarrollado por SQ# Sitio Web de SQ
 
-A simple landing page for a digital agency
+Este es el repositorio oficial del sitio web de **SQ**, desarrollado por el equipo de **SQ**.  
+Aquí encontrarás la información técnica del proyecto, cómo ejecutarlo localmente y las tecnologías utilizadas.
 
-![AgenceX light Theme](./screens/demoLight.webp)
-![AgenceX Dark Theme](./screens/demoDark.webp)
+---
 
+## 🚀 Características
 
-## Tools
-- TailwindCSS v3.3
-- AstroJs v3
+- Diseño moderno y responsivo.
+- Optimizado para SEO y velocidad.
+- Fácilmente escalable y mantenible.
+- Integración con herramientas de análisis.
 
+---
 
-## 🚀 Project Structure
+## 🛠️ Tecnologías Utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Frontend**: Astro
+- **Backend**: Astro
+- **Hosting**: Vercel.
+- **Otras Herramientas**: Tailwind CSS
 
-```
-/
-├── public/
-│   ├── images/
-│   ├── logos/*
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   ├── blocks/*
-│   │   ├── cards/*
-│   │   ├── elements/*
-│   │   ├── sections/*
-│   │   ├── shared/*
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-├── package.json
-└── tailwind.config.cjs
-```
+---
 
+## ⚙️ Instalación y Uso Local
 
-## 🧞 Commands
+Sigue estos pasos para ejecutar el proyecto localmente:
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:4321`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/tu-usuario/sitio-sq.git
