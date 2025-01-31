@@ -2,25 +2,27 @@
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-
 ---
 
-<section id="features">
+<section id="features" class="relative pt-24 pb-24 lg:pt-32 lg:pb-32 bg-[#4f46e5]">
     <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
         
         <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
-            <Title>
-                Te proveemos de ventajas de Marketing Competitivas
+            <Title class="text-white">
+                Nuestro portfolio digital
             </Title>
-            <Paragraph className="mt-8">
-                ¿Estás buscando ayuda para crecer tu marca y acercarla a nuevos clientes potenciales?
-                <br> 
-                ¿No tienes tiempo o los conocimientos para la gestión integral de la imagen de tu empresa?
+            <Paragraph className="mt-8 text-white">
+                Te invitamos a explorar nuestros casos de éxito y proyectos destacados en todos 
+                nuestros servicios de marketing digital. Hemos creado páginas web con diseños impactantes, 
+                intuitivos y optimizados para SEO, así como diseños de redes sociales y diseños gráficos innovadores.
             </Paragraph>
-            <Paragraph className="mt-2">
-                Con nosotros, lograrás tus objetivos en poco tiempo y con una atención personalizada.
+            <Paragraph className="mt-2 text-white">
+                Dejemos las palabras a un lado; una imagen vale más que mil palabras. Permítenos que nuestro trabajo hable por sí mismo.
             </Paragraph>
-            <ul class="mt-8 space-y-4 text-heading-3 font-medium">
+            <Paragraph className="mt-2 text-white">
+                ¡Descubre nuestra selección de proyectos recientes!
+            </Paragraph>
+            <ul class="mt-8 space-y-4 text-heading-3 font-medium text-white">
                 <li>
                     <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Analítaca de Branding
                 </li>
@@ -36,15 +38,11 @@ import Title from "../shared/Title.astro";
             </ul>
         </div>
 
-        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0  lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
+        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
             <div class="w-full h-80 sm:h-96 midmd:h-full relative">
+                <img src="/images/proyectos.webp" alt="Descripción de la imagen" class="w-full h-full object-cover">
                 <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
-                <div class="absolute  p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
-                
-                <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0"></span>
-                <img src={"/logos/datos.svg"} alt="banner image" 
-                width="1240" height="1385"
-                class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" />
+                <div class="absolute p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
             </div>
         </div>
     </Container>

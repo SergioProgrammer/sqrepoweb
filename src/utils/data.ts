@@ -1,18 +1,18 @@
 const services = [
     {
-        title: "Diseño Editorial",
-        description: "Maquetación de memorias corporativas, libros, revistas, infografías; diseño de portadas.",
-        icon: `<img src="/logos/diseño.svg" alt="Diseño Editorial" class="w-6 h-6">`,
+        title: "Web",
+        description: "Desarrollo web personalizado y actualizado con la última tecnología Astro y Tailwind",
+        
     },
     {
-        title: "Diseño Gráfico",
-        description: "Diseño de infografías, cartelería, señalética y espacios, ilustraciones; identidad corporativa; packaging.",
-        icon: `<img src="/logos/grafico.svg" alt="Diseño Gráfico" class="w-6 h-6">`,
+        title: "SEO & SEM",
+        description: "Estrategias integrales para potenciar el tráfico orgánico y de pago de tu sitio web",
+        
     },
     {
-        title: "Marketing 360°",
-        description: "Estrategias en comunicación y publicidad para lanzar tu negocio en el mercado.",
-        icon: `<img src="/logos/marketing.svg" alt="Marketing 360°" class="w-6 h-6">`,
+        title: "Diseño y Creatividad",
+        description: " Creatividad e innovación de estilos, formas, sensaciones y colores",
+        
     },
 ];
 

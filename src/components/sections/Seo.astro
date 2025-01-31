@@ -1,0 +1,46 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+---
+
+<section id="features" class="relative pt-24 pb-24 lg:pt-32 lg:pb-32 bg-[#4f46e5]">
+    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
+        
+        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
+            <Title class="text-white">
+                Te proveemos de ventajas de Marketing Competitivas
+            </Title>
+            <Paragraph className="mt-8 text-white">
+                ¿Estás buscando ayuda para crecer tu marca y acercarla a nuevos clientes potenciales?
+                <br> 
+                ¿No tienes tiempo o los conocimientos para la gestión integral de la imagen de tu empresa?
+            </Paragraph>
+            <Paragraph className="mt-2 text-white">
+                Con nosotros, lograrás tus objetivos en poco tiempo y con una atención personalizada.
+            </Paragraph>
+            <ul class="mt-8 space-y-4 text-heading-3 font-medium text-white">
+                <li>
+                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Analítaca de Branding
+                </li>
+                <li>
+                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Optimización de recursos
+                </li>
+                <li>
+                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Gestión de tu marca
+                </li>
+                <li>
+                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Desarrollo de imagen corporativa
+                </li>
+            </ul>
+        </div>
+
+        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
+            <div class="w-full h-80 sm:h-96 midmd:h-full relative">
+                <img src="/logos/datos.svg" alt="Descripción de la imagen" class="w-full h-full object-cover">
+                <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
+                <div class="absolute p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
+            </div>
+        </div>
+    </Container>
+</section>
