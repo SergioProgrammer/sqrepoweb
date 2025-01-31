@@ -2,6 +2,7 @@
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
+import Button from "../shared/Button.astro";
 ---
 
 <section id="features" class="relative pt-24 pb-24 lg:pt-32 lg:pb-32 bg-[#4f46e5]">
@@ -36,6 +37,13 @@ import Title from "../shared/Title.astro";
                     <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Desarrollo de imagen corporativa
                 </li>
             </ul>
+            <div class="mt-8">
+                <a href="/proyectos" class="inline-block">
+                    <Button variant="primary">
+                        <span class="text-white">Ver Proyectos</span>
+                    </Button>
+                </a>
+            </div>
         </div>
 
         <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">

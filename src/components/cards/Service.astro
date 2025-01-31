@@ -1,14 +1,18 @@
 ---
 import Paragraph from "../shared/Paragraph.astro";
 
-export interface Props {
-	title: string;
-	description: string;
-}
+const { title, description, className } = Astro.props;
 
-const { title, description } = Astro.props;
+let link = "/seo";
+
+if (title === "Web") {
+	link = "/web";
+} else if (title === "Diseño y Creatividad") {
+	link = "/diseño";
+}
 ---
-<div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-gradient-to-br from-indigo-600 via-primary to-green-600 shadow-lg shadow-box-shadow relative overflow-hidden">
+
+<div class={`p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-gradient-to-br from-indigo-600 via-primary to-green-600 shadow-lg shadow-box-shadow relative overflow-hidden ${className}`}>
     <div class="mt-6 space-y-4 relative">
         <h2 class="text-lg md:text-xl font-semibold text-white">
             {title}
@@ -16,5 +20,6 @@ const { title, description } = Astro.props;
         <Paragraph class="text-white">
             {description}
         </Paragraph>
+        <a href={link} class="text-white underline">Ver más</a> 
     </div>
 </div>

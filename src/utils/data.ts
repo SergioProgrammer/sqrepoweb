@@ -11,7 +11,7 @@ const services = [
     },
     {
         title: "Diseño y Creatividad",
-        description: " Creatividad e innovación de estilos, formas, sensaciones y colores",
+        description: " Creatividad e innovación de estilos, formas, sensaciones y colores gracias a una imagen cuidada",
         
     },
 ];
