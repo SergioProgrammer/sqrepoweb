@@ -1,0 +1,47 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+---
+
+<section id="features" class="relative pt-24 pb-24 lg:pt-32 lg:pb-32 bg-[#4f46e5]">
+    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
+        
+        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
+            <Title class="text-white">
+                SEO Content
+            </Title>
+            <Paragraph className="mt-2 text-white">
+               ----------------------------
+            </Paragraph>
+        </div>
+
+        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
+            <Paragraph className="mt-8 text-white  text-lg lg:text-xl">
+                El SEO, o posicionamiento en buscadores, es fundamental para incrementar la visibilidad de tu sitio web. Al implementar técnicas de optimización on-page y off-page, como la investigación de palabras clave y la creación de contenido de calidad, puedes mejorar tu ranking en Google. Atrae más tráfico orgánico y potencia tu negocio en línea aplicando estrategias SEO efectivas.            </Paragraph>
+            <ul class="mt-8 space-y-4 text-heading-3 font-medium text-white text-lg lg:text-xl">
+                <li>
+                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Auditoría SEO Y SEM
+                </li>
+                <li>
+                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> On-Page y Off-Page
+
+                </li>
+                <li>
+                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Consultoría SEO
+
+                </li>
+                <li>
+                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> SEO Content
+
+                </li>
+                <li>
+                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Estrategia SEO 
+
+                </li>
+            </ul>
+            <div class="mt-8">
+            </div>
+        </div>
+    </Container>
+</section>
