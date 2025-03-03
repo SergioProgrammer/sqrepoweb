@@ -6,6 +6,10 @@ import AboutUs from '../components/sections/AboutUs.astro';
 import Features from '../components/sections/Features.astro';
 import CTA from '../components/sections/CTA.astro';
 import Brands from '../components/sections/Brands.astro';
+import { getPageInfo } from '../../lib/wp';
+import { getParsedType } from 'astro:schema';
+
+const { title, content } = await getPageInfo("Ayudamos a desarrollar y potenciar tu imagen para destacar en un mundo competitivo")
 ---
 <meta charset="UTF-8">
 <link rel="canonical" href="https://saraquintana.info/">
