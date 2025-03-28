@@ -2,6 +2,7 @@
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
+import SplashCursor from "../../components/SplashCursor.jsx";
 ---
 
 <section id="features" class="relative pt-24 pb-24 lg:pt-32 lg:pb-32 bg-[#4f46e5]">
@@ -18,7 +19,7 @@ import Title from "../shared/Title.astro";
 
         <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
             <Paragraph className="mt-8 text-white  text-lg lg:text-xl">
-                Cada semana nuevos tutoriales para potenciar tu marca, aumenta la visibilidad y genera leads cualificados. Optimiza tu presencia de marca y alcanza tus objetivos de marketing.
+                Cada mes nuevos tutoriales para potenciar tu marca, aumenta la visibilidad y genera leads cualificados. Optimiza tu presencia de marca y alcanza tus objetivos de marketing.
                 <ul class="mt-8 space-y-4 text-heading-3 font-medium text-white text-lg lg:text-xl">
                 <li>
                     <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Asesoría, contenido y estrategia de branding
@@ -53,5 +54,8 @@ import Title from "../shared/Title.astro";
             <div class="mt-8">
             </div>
         </div>
+        <section>
+            <SplashCursor client:load />
+        </section>
     </Container>
 </section>
