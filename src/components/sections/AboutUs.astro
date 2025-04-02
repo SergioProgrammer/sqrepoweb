@@ -5,22 +5,26 @@ import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 ---
 
-<section id="about-us">
-    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
-        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0  lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
+<section 
+    id="about-us" 
+    class="relative bg-cover bg-center bg-no-repeat pt-24 pb-24 lg:pt-32 lg:pb-32" 
+    style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url('/images/bg2.jpg');"
+>
+    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12 relative z-10">
+        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
             <div class="w-full h-80 sm:h-96 midmd:h-full relative">
                 <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
-                <div class="absolute  p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
+                <div class="absolute p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
                 
                 <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0"></span>
                 <img src={"images/impulsamos.webp"} alt="banner image" 
                 width="1240" height="1385"
-                class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" />
+                class="w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" />
             </div>
         </div> 
         <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
             <h2><Title>
-                Impulsamos tu Negocio con una Página Web con contenido optimizado para SEO
+                Impulsamos tu Negocio con una <span class="text-blue-500">Página Web</span> con contenido optimizado para <span class="text-blue-500">SEO</span>
             </Title></h2>
             <Paragraph className="mt-8">
                 A través de la visibilidad Online impulsamos tu negocio para llegar a más clientes potenciales.

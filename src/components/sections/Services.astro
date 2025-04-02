@@ -4,31 +4,44 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 import { services } from "../../utils/data.ts";
+import ScrollVelocity from "../../components/ScrollVelocity.jsx";
 
 type ServicesProps = {
-	title: string;
-	description: string;
+    title: string;
+    description: string;
 };
+
+// Define la velocidad para ScrollVelocity
+const velocity = 0.5; // Ajusta este valor según la velocidad deseada
 ---
 <section id="services">
-    <Container className="space-y-10 md:sapce-y-12">
-        <div class="text-center max-w-3xl mx-auto space-y-4">
-            <h2><Title>
-                El <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">knowledge</span> más avanzado que te ofrecemos en SQ
-            </Title></h2>
-            <h3><Paragraph>
-                Agencia de diseño que (r)evoluciona tu marca
-            </Paragraph></h3>
+    <Container className="space-y-10 md:space-y-12">
+        <div class="text-center max-w-8xl mx-auto space-y-4">
+            <h2>
+                <Title>
+                    El <span class="text-transparent text-8xl bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">knowledge</span> que (R)EVOLUCIONA tu marca
+                </Title>
+            </h2>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
             {
-                    services.map((service: ServicesProps) => {
+                services.map((service: ServicesProps) => {
                     return (
-                            <Service title={service.title} description={service.description} class="bg-[#4f46e5]">
-                            </Service>
-                            );
-                    })
+                        <Service 
+                            title={service.title} 
+                            description={service.description} 
+                            class="bg-[#4f46e5]"
+                        />
+                    );
+                })
             }
         </div>
+        <ScrollVelocity 
+        client:load 
+        texts={['React Bits', 'Scroll Down']} 
+        velocity={velocity} 
+        className="custom-scroll-text"
+    />
     </Container>
+    
 </section>

@@ -15,7 +15,9 @@
     "@astrojs/tailwind": "^5.0.0",
     "@react-spring/web": "^9.7.5",
     "astro": "^5.4.1",
+    "framer-motion": "^12.6.3",
     "gl-matrix": "^3.4.3",
+    "gsap": "^3.12.7",
     "tailwindcss": "^3.3.3"
   }
 }
