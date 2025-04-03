@@ -24,7 +24,7 @@ const AnimatedText2 = () => {
   return (
     <div
   ref={textRef}
-  className="absolute bottom-4/4 text-center text-white align-text-bottom font-extrabold mt-36"
+  className="absolute bottom-4/4 text-center text-white align-text-bottom font-extrabold mt-36 leading-tight"
   style={{ fontSize: "12rem" }} // Tamaño personalizado
 >
       <span className="block">Design Solutions</span>
