@@ -23,10 +23,11 @@ const AnimatedText2 = () => {
 
   return (
     <div
-      ref={textRef}
-      className="absolute bottom-4/4 right-10 text-white text-8xl font-bold text-left mt-36 " 
-    >
-      <span className="block">Crea la marca de tus sueños</span>
+  ref={textRef}
+  className="absolute bottom-4/4 text-center text-white align-text-bottom font-extrabold mt-36"
+  style={{ fontSize: "12rem" }} // Tamaño personalizado
+>
+      <span className="block">Design Solutions</span>
       
     </div>
   );

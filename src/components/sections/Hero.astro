@@ -44,7 +44,7 @@ import AnimatedText2 from "../../components/AnimatedText2.jsx";
             window.addEventListener("scroll", () => {
                 const video = document.getElementById("scrolling-video");
                 const scrollPosition = window.scrollY;
-                const scale = 1 + scrollPosition * 0.005; // Ajusta el factor de ampliación según sea necesario
+                const scale = 1 + scrollPosition * 0.005; 
                 video.style.transform = `scale(${scale})`;
             });
         }

@@ -24,11 +24,10 @@ const AnimatedText = () => {
   return (
     <div
       ref={textRef}
-      className="text-white text-4xl font-bold text-left  mt-40" // Ajusta el margen superior aquí
+      className="text-white text-2xl font-bold text-left  mt-40" // Ajusta el margen superior aquí
     >
-      <span className="block">Crea</span>
-      <span className="block">para</span>
-      <span className="block">el futuro</span>
+      <span className="block">Diseño Web</span>
+      <span className="block">Marketing</span>
     </div>
   );
  
