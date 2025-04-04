@@ -869,7 +869,6 @@ const defaultItems = [
     description: ''
   },
 ];
-
 export default function InfiniteMenu({ items = [] }) {
   const canvasRef = useRef(null);
   const [activeItem, setActiveItem] = useState(null);
@@ -919,7 +918,7 @@ export default function InfiniteMenu({ items = [] }) {
 
   return (
     <div
-      className="relative w-full h-full border-4 border-white rounded-lg" // Added rounded-lg for rounded corners
+      className="relative w-full h-full border-4 border-white rounded-lg bg-transparent" // bg-transparent ensures transparency
     >
       <canvas
         id="infinite-grid-menu-canvas"
@@ -984,7 +983,7 @@ export default function InfiniteMenu({ items = [] }) {
           grid
           place-items-center
           bg-[#ffffff]
-          border-[8px]
+          border-[5px]
           border-black
           rounded-full
           cursor-pointer
