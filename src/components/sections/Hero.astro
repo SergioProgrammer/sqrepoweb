@@ -1,30 +1,29 @@
 ---
+// Astro frontmatter
 import Container from "../shared/Container.astro";
 import SplashCursor from "../../components/SplashCursor.jsx";
-import AnimatedText2 from "../../components/AnimatedText2.jsx";
 ---
-<section class="relative h-screen" id="Hero">
-    
+
+<section class="relative h-[110vh]" id="Hero"> 
     <video 
         id="scrolling-video"
-        src="/images/hero.mp4" 
+        src="/images/hero1.mp4" 
         autoplay 
         loop 
         muted 
         playsinline 
-        class="absolute inset-0 w-full h-full object-cover -z-10 lg:h-full">
+        class="absolute inset-0 w-full h-full object-cover -z-10 lg:h-full transition-transform duration-300 ease-out">
     </video>
     
     <Container class="flex flex-col lg:flex-row gap-10 lg:gap-12 mb-0">
         <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
-            <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
-            <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
+            <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
+            <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl blur-xl opacity-80"></span>
         </div>
-        <span class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
+        <span class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
         
-    
         <div id="scroll-text" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center gap-4 px-4 w-full max-w-screen-md">
-            
+            <!-- Línea 1: DESIGN -->
             <div class="flex flex-wrap justify-center gap-2">
                 <img src="/images/SVG/D.svg" alt="D" class="w-32 h-32">
                 <img src="/images/SVG/E.svg" alt="E" class="w-32 h-32">
@@ -33,7 +32,7 @@ import AnimatedText2 from "../../components/AnimatedText2.jsx";
                 <img src="/images/SVG/G.svg" alt="G" class="w-32 h-32">
                 <img src="/images/SVG/N.svg" alt="N" class="w-32 h-32">
             </div>
-           
+            <!-- Línea 2: STUDIO -->
             <div class="flex flex-wrap justify-center gap-2">
                 <img src="/images/SVG/S.svg" alt="S" class="w-32 h-32">
                 <img src="/images/SVG/T.svg" alt="T" class="w-32 h-32">
@@ -41,22 +40,40 @@ import AnimatedText2 from "../../components/AnimatedText2.jsx";
                 <img src="/images/SVG/D.svg" alt="D" class="w-32 h-32">
                 <img src="/images/SVG/I.svg" alt="I" class="w-32 h-32">
                 <img src="/images/SVG/O.svg" alt="O" class="w-32 h-32">
-            
             </div>
         </div>
+
         <section>
             <SplashCursor client:load />
         </section>
     </Container>
 
-
     <script>
         if (typeof window !== "undefined") {
-            window.addEventListener("scroll", () => {
-                const video = document.getElementById("scrolling-video");
-                const scrollPosition = window.scrollY;
-                const scale = 1 + scrollPosition * 0.005; 
+            const video = document.getElementById("scrolling-video");
+            const heroSection = document.getElementById("Hero");
+            const heroHeight = heroSection.offsetHeight;
+
+            let lastScrollY = 0;
+            let ticking = false;
+
+            function updateEffects() {
+                const maxScale = 1 + heroHeight * 0.005;
+                const scale = Math.min(1 + lastScrollY * 0.005, maxScale);
+                const blur = Math.min(lastScrollY / 100, 10); // Máximo 10px
+
                 video.style.transform = `scale(${scale})`;
+                video.style.filter = `blur(${blur}px)`;
+
+                ticking = false;
+            }
+
+            window.addEventListener("scroll", () => {
+                lastScrollY = window.scrollY;
+                if (!ticking) {
+                    requestAnimationFrame(updateEffects);
+                    ticking = true;
+                }
             });
         }
     </script>
