@@ -3,113 +3,27 @@ import GroupFooterNav from "../blocks/GroupFooterNav.astro";
 import Container from "../shared/Container.astro";
 import FooterNav from "../shared/FooterNav.astro";
 import Paragraph from "../shared/Paragraph.astro";
-const footerNav1 = [
-	{
-		itemText: "Marketing",
-		itemLink: "#",
-	},
-	{
-		itemText: "Analylitics",
-		itemLink: "#",
-	},
-	{
-		itemText: "Commerce",
-		itemLink: "#",
-	},
-	{
-		itemText: "Insights",
-		itemLink: "#",
-	},
-];
-
-const footerSupport = [
-	{
-		itemText: "Pricing",
-		itemLink: "#",
-	},
-	{
-		itemText: "Guides",
-		itemLink: "#",
-	},
-	{
-		itemText: "FAQ",
-		itemLink: "#",
-	},
-	{
-		itemText: "Contacto",
-		itemLink: "#",
-	},
-];
 
 const footerCompany = [
-	{
-		itemText: "About",
-		itemLink: "/about",
-	},
-	{
-		itemText: "Blog",
-		itemLink: "#",
-	},
-	{
-		itemText: "Jobs",
-		itemLink: "#",
-	},
-	{
-		itemText: "Parteners",
-		itemLink: "#",
-	},
-	{
-		itemText: "España",
-		itemLink: "/espana",
-	},
+    {
+        itemText: "España",
+        itemLink: "/espana",
+    },
 ];
 const footerLegal = [
-	{
-		itemText: "Claim",
-		itemLink: "/terminosycon",
-	},
-	{
-		itemText: "Privacy",
-		itemLink: "/terminosycon",
-	},
-	{
-		itemText: "Terms",
-		itemLink: "/terminosycon",
-	},
+    {
+        itemText: "Términos y privacidad",
+        itemLink: "/terminosycon",
+    },
 ];
 ---
 <div class="mt-16"></div>
-<footer class="relative  bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-28 rounded-t-3xl">
-    <div class="absolute right-0 top-0 h-full w-full flex justify-end">
-        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
-            <span
-              class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
-            ></span>
-          </div>
-      </div>
+<footer class="relative pt-28 rounded-t-3xl">
+    
 
-      <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
-        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
-            <span
-              class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
-            ></span>
-          </div>
-      </div>
+    <div class="absolute right-0 top-0 h-full w-full flex justify-end"></div>
     <Container className="pb-8 relative overflow-auto">
-        
-        <span class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary"></span>
+        <span class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6"></span>
         <div class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative">
             <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
                 <div class="h-full">
@@ -141,23 +55,16 @@ const footerLegal = [
                         </svg>
                         <span class="sr-only">social link</span>
                     </a>
-
                 </div>
             </div>
 
             <GroupFooterNav>
                 <FooterNav title={"Company"} navItems={footerCompany}/>
-                <FooterNav title={"Solutions"} navItems={footerNav1}/>
-            </GroupFooterNav>
-
-            <GroupFooterNav>
-                <FooterNav title={"Support"} navItems={footerSupport}/>
                 <FooterNav title={"Ressources"} navItems={footerLegal}/>
             </GroupFooterNav>
-
         </div>
     </Container>
-    <div class=" bg-gradient-to-tl from-box-bg py-2 relative">
+    <div class="bg-transparent py-2 relative">
         <Container>
             <div class="flex justify-between items-center gap-6 md:text-lg text-heading-3">
                 <div>

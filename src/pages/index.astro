@@ -37,7 +37,6 @@ import RollingGallery2 from '../components/sections/RollingGallery2.astro';
 		<Brands/>
 		<ScrollVelocity2/>
 		<FlowingMenu1/>
-		
 		<RollingGallery1 />	
 		<RollingGallery2 />
 		<CTA/>
@@ -46,6 +45,11 @@ import RollingGallery2 from '../components/sections/RollingGallery2.astro';
 </Layout>
 
 <style>
+
+	 html {
+      scroll-behavior: smooth;
+    }
+
 	#loading-bar-container {
 	  position: fixed;
 	  top: 0;

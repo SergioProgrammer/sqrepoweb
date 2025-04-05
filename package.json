@@ -18,6 +18,7 @@
     "framer-motion": "^12.6.3",
     "gl-matrix": "^3.4.3",
     "gsap": "^3.12.7",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "three": "^0.175.0"
   }
 }

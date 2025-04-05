@@ -1,22 +1,26 @@
 ---
-export interface Props{
-    className?:string,
-    variant:"primary"|"secondary"
+export interface Props {
+    className?: string,
+    variant: "primary" | "secondary" | "transparent"
 }
 
-const {className, variant} = Astro.props
+const { className, variant } = Astro.props
 
-const getThemeStyle = (variant:"primary"|"secondary")=>{
+const getThemeStyle = (variant: "primary" | "secondary" | "transparent") => {
     if (variant === "primary") {
-        return "bg-primary border-transparent relative after:bg-[#172554] hover:border-[#172554]"
+        return "bg-white text-black border-transparent relative after:bg-[#172554] hover:border-[#172554]"
     }
-    return "text-primary"
+    if (variant === "secondary") {
+        return "text-primary"
+    }
+    if (variant === "transparent") {
+        return "bg-transparent text-white border-white hover:bg-white hover:text-black"
+    }
 }
-
-
 ---
+
 <button class={`px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
-                    after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554]
+                    after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0
                     ${getThemeStyle(variant)} hover:after:opacity-100 hover:after:scale-[2.5] ${className}`}>
     <slot/>
 </button>
