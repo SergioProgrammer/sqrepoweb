@@ -1,16 +1,15 @@
 ---
 import FlowingMenu from '../../components/FlowingMenu.jsx';
 
-
 const demoItems = [
-  { text: 'CÓDIGO PERSONALIZADO', image: 'https://picsum.photos/600/400?random=1' },
-  { text: 'DISEÑO INNOVADOR', image: 'https://picsum.photos/600/400?random=2' },
-  { text: 'POSICIONAMIENTO', image: 'https://picsum.photos/600/400?random=3' },
-  { text: 'BRANDING', image: 'https://picsum.photos/600/400?random=4' }
+  { text: 'CÓDIGO PERSONALIZADO', image: '/proyectos/9.webp' },
+  { text: 'DISEÑO INNOVADOR', image: '/proyectos/3.webp' },
+  { text: 'POSICIONAMIENTO', image: '/proyectos/2.webp' },
+  { text: 'BRANDING', image: '/proyectos/1.webp' }
 ];
 ---
 <div style={{ height: '600px', position: 'relative' }}>
   <FlowingMenu 
-  client:load 
-  items={demoItems} />
+    client:load 
+    items={demoItems} />
 </div>
