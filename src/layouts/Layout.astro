@@ -29,6 +29,32 @@ const { title } = Astro.props;
     <Footer />
   </body>
   <script>
+    // Desplazamiento más suave al hacer scroll
+    document.addEventListener("DOMContentLoaded", () => {
+      let scrollTimeout;
+
+      window.addEventListener("scroll", () => {
+        clearTimeout(scrollTimeout);
+        document.documentElement.style.scrollBehavior = "smooth";
+
+        scrollTimeout = setTimeout(() => {
+          document.documentElement.style.scrollBehavior = "auto";
+        }, 1000); // Cambia a "auto" después de 1 segundo para evitar conflictos
+      });
+    });
+  </script>
+  <style is:global>
+    html {
+      scroll-behavior: smooth; /* Desplazamiento suave por defecto */
+    }
+
+    body {
+      font-family: "Raleway", sans-serif;
+      background-color: var(--color-bg);
+      color: var(--heading-1);
+    }
+  </style>
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
       const switchTheme = document.querySelector("[data-switch-theme]");
 
@@ -39,7 +65,7 @@ const { title } = Astro.props;
       ) {
         document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.add("dark"); // Set dark mode as default
+        document.documentElement.classList.add("dark"); 
       }
 
       if (switchTheme) {
