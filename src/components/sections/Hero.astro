@@ -22,26 +22,29 @@ import SplashCursor from "../../components/SplashCursor.jsx";
         </div>
         <span class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
         
-        <div id="scroll-text" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex items-center  px-4 w-full max-w-screen-md">
-            <!-- Línea 1: DESIGN -->
-            <div class="flex flex-wrap justify-center gap-2">
-                <img src="/images/SVG/D.svg" alt="D" class="w-32 h-32">
-                <img src="/images/SVG/E.svg" alt="E" class="w-32 h-32">
-                <img src="/images/SVG/S.svg" alt="S" class="w-32 h-32">
-                <img src="/images/SVG/I.svg" alt="I" class="w-32 h-32">
-                <img src="/images/SVG/G.svg" alt="G" class="w-32 h-32">
-                <img src="/images/SVG/N.svg" alt="N" class="w-32 h-32">
+        <div id="scroll-text" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-full max-w-screen-md px-4">
+            <div class="flex flex-col md:gap-4 gap-2 items-center">
+              <!-- Línea 1: DESIGN -->
+              <div class="flex justify-center flex-wrap gap-1 md:gap-2">
+                <img src="/images/SVG/D.svg" alt="D" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/E.svg" alt="E" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/S.svg" alt="S" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/I.svg" alt="I" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/G.svg" alt="G" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/N.svg" alt="N" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+              </div>
+              <!-- Línea 2: STUDIO -->
+              <div class="flex justify-center flex-wrap gap-1 md:gap-2">
+                <img src="/images/SVG/S.svg" alt="S" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/T.svg" alt="T" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/U.svg" alt="U" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/D.svg" alt="D" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/I.svg" alt="I" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+                <img src="/images/SVG/O.svg" alt="O" class="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+              </div>
             </div>
-            <!-- Línea 2: STUDIO -->
-            <div class="flex flex-wrap justify-center gap-2">
-                <img src="/images/SVG/S.svg" alt="S" class="w-32 h-32">
-                <img src="/images/SVG/T.svg" alt="T" class="w-32 h-32">
-                <img src="/images/SVG/U.svg" alt="U" class="w-32 h-32">
-                <img src="/images/SVG/D.svg" alt="D" class="w-32 h-32">
-                <img src="/images/SVG/I.svg" alt="I" class="w-32 h-32">
-                <img src="/images/SVG/O.svg" alt="O" class="w-32 h-32">
-            </div>
-        </div>
+          </div>
+          
 
         <section>
             <SplashCursor client:load />
