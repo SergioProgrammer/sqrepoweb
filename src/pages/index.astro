@@ -6,85 +6,87 @@ import Brands from '../components/sections/Brands.astro';
 import AnimatedText from '../components/sections/AnimatedText.astro';
 import ScrollVelocity2 from '../components/sections/ScrollVelocity2.astro';
 import FlowingMenu1 from '../components/sections/FlowingMenu1.astro';
+import Timeline1 from '../components/sections/Timeline1.astro';
 import HeroParallax from "../components/sections/HeroParallax.tsx"; 
 const products = [
   {
-    title: "Algochurn",
+    title: "Maquetación libro",
     link: "https://algochurn.com",
     image: "/proyectos/1.webp",
   },
   {
-    title: "Aceternity UI",
+    title: "Maquetación libro",
     link: "https://ui.aceternity.com",
     image: "/proyectos/2.webp",
   },
   {
-    title: "Tailwind Master Kit",
+    title: "Imagen corporativa",
     link: "https://tailwindmasterkit.com",
     image: "/proyectos/3.webp",
   },
   {
-    title: "SmartBridge",
+    title: "Logo",
     link: "https://smartbridgetech.com",
     image: "/proyectos/4.webp",
   },
   {
-    title: "Renderwork Studio",
+    title: "Diseño Cartel Luminoso",
     link: "https://renderwork.studio",
     image: "/proyectos/5.webp",
   },
   {
-    title: "Creme Digital",
+    title: "Diseño Logo",
     link: "https://cremedigital.com",
     image: "/proyectos/6.webp",
   },
   {
-    title: "Tailwind Master Kit",
+    title: "Redes Sociales",
     link: "https://tailwindmasterkit.com",
     image: "/proyectos/7.webp",
   },
   {
-    title: "SmartBridge",
+    title: "Redes Sociales",
     link: "https://smartbridgetech.com",
     image: "/proyectos/8.webp",
   },
   {
-    title: "Renderwork Studio",
+    title: "Portada Maqueta",
     link: "https://renderwork.studio",
     image: "/proyectos/9.webp",
   },
   {
-    title: "Creme Digital",
+    title: "Logo Cabecera Congreso",
     link: "https://cremedigital.com",
     image: "/proyectos/10.webp",
   },
   {
-    title: "SmartBridge",
+    title: "Diseño y desarrollo Web",
     link: "https://smartbridgetech.com",
     image: "/proyectos/11.webp",
   },
   {
-    title: "Renderwork Studio",
+    title: "Banner Web",
     link: "https://renderwork.studio",
     image: "/proyectos/12.webp",
   },
   {
-    title: "Creme Digital",
+    title: "Infografía",
     link: "https://cremedigital.com",
     image: "/proyectos/13.webp",
   },
   {
-	title: "Algochurn",
+	title: "Cartel",
 	link: "https://algochurn.com",
-	image: "/proyectos/14.webp",
+	image: "/proyectos/20.webp",
   },
   {
-	title: "Aceternity UI",
+	title: "Blender",
 	link: "https://ui.aceternity.com",
-	image: "/proyectos/15.webp",
+	image: "/proyectos/21.webp",
   },
   
 ];
+
 ---
 <meta charset="UTF-8">
 <link rel="canonical" href="https://saraquintana.info/">
@@ -111,7 +113,8 @@ const products = [
         <Brands />
         <ScrollVelocity2 />
         <FlowingMenu1 />
-		<HeroParallax products={products} client:load />        
+		<HeroParallax products={products} client:load />   
+		<Timeline1 />
         <CTA />
     </main>
 </Layout>

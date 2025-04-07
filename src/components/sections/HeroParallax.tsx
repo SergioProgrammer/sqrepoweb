@@ -9,7 +9,7 @@ import {
 
 type Product = {
   title: string;
-  image: string; // Asegúrate de que la propiedad sea "image"
+  image: string; 
 };
 
 interface HeroParallaxProps {
