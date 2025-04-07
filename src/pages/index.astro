@@ -6,102 +6,172 @@ import Brands from '../components/sections/Brands.astro';
 import AnimatedText from '../components/sections/AnimatedText.astro';
 import ScrollVelocity2 from '../components/sections/ScrollVelocity2.astro';
 import FlowingMenu1 from '../components/sections/FlowingMenu1.astro';
-import RollingGallery1 from '../components/sections/RollingGallery1.astro';
-import RollingGallery2 from '../components/sections/RollingGallery2.astro';
+import HeroParallax from "../components/sections/HeroParallax.tsx"; 
+const products = [
+  {
+    title: "Algochurn",
+    link: "https://algochurn.com",
+    image: "/proyectos/1.webp",
+  },
+  {
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com",
+    image: "/proyectos/2.webp",
+  },
+  {
+    title: "Tailwind Master Kit",
+    link: "https://tailwindmasterkit.com",
+    image: "/proyectos/3.webp",
+  },
+  {
+    title: "SmartBridge",
+    link: "https://smartbridgetech.com",
+    image: "/proyectos/4.webp",
+  },
+  {
+    title: "Renderwork Studio",
+    link: "https://renderwork.studio",
+    image: "/proyectos/5.webp",
+  },
+  {
+    title: "Creme Digital",
+    link: "https://cremedigital.com",
+    image: "/proyectos/6.webp",
+  },
+  {
+    title: "Tailwind Master Kit",
+    link: "https://tailwindmasterkit.com",
+    image: "/proyectos/7.webp",
+  },
+  {
+    title: "SmartBridge",
+    link: "https://smartbridgetech.com",
+    image: "/proyectos/8.webp",
+  },
+  {
+    title: "Renderwork Studio",
+    link: "https://renderwork.studio",
+    image: "/proyectos/9.webp",
+  },
+  {
+    title: "Creme Digital",
+    link: "https://cremedigital.com",
+    image: "/proyectos/10.webp",
+  },
+  {
+    title: "SmartBridge",
+    link: "https://smartbridgetech.com",
+    image: "/proyectos/11.webp",
+  },
+  {
+    title: "Renderwork Studio",
+    link: "https://renderwork.studio",
+    image: "/proyectos/12.webp",
+  },
+  {
+    title: "Creme Digital",
+    link: "https://cremedigital.com",
+    image: "/proyectos/13.webp",
+  },
+  {
+	title: "Algochurn",
+	link: "https://algochurn.com",
+	image: "/proyectos/14.webp",
+  },
+  {
+	title: "Aceternity UI",
+	link: "https://ui.aceternity.com",
+	image: "/proyectos/15.webp",
+  },
+  
+];
 ---
 <meta charset="UTF-8">
 <link rel="canonical" href="https://saraquintana.info/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description"
-	content="Diseño gráfico y Marketing para tus proyectos tanto en internet como físicos">
+<meta name="description" content="Diseño gráfico y Marketing para tus proyectos tanto en internet como físicos">
 <meta property="og:title" content="Agencia de Social Media y Marketing SEO">
-<meta property="og:description"
-	content="Empresa que trabaja en el sector del diseño gráfico y la programación de páginas web para dar vida a tu marca">
+<meta property="og:description" content="Empresa que trabaja en el sector del diseño gráfico y la programación de páginas web para dar vida a tu marca">
 <meta property="og:image" content="images/portada1.png">
 <meta property="og:url" content="https://saraquintana.info">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Sara Quintana Diseño gráfico, redes sociales y SEO">
 <meta property="og:image:alt" content="Agencia en Canarias">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <Layout title=" | Agencia Diseño Gráfico y Marketing">
-	<main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
-		<div id="loading-bar-container" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
-			<div class="loading-bar">
-				<div class="loading-bar-progress"></div>
-			</div>
-		</div>
-		<Hero/>
-		<AnimatedText/>
-		<Brands/>
-		<ScrollVelocity2/>
-		<FlowingMenu1/>
-		<RollingGallery1 />	
-		<RollingGallery2 />
-		<CTA/>
-		
-	</main>
+    <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+        <div id="loading-bar-container" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+            <div class="loading-bar">
+                <div class="loading-bar-progress"></div>
+            </div>
+        </div>
+        <Hero />
+        <AnimatedText />
+        <Brands />
+        <ScrollVelocity2 />
+        <FlowingMenu1 />
+		<HeroParallax products={products} client:load />        
+        <CTA />
+    </main>
 </Layout>
 
 <style>
-
-	 html {
-      scroll-behavior: smooth;
+    html {
+        scroll-behavior: smooth;
     }
 
-	#loading-bar-container {
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  background-color: rgb(0, 0, 0); 
-	  z-index: 9999; 
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	}
-  
-	.loading-bar {
-	  width: 80%;
-	  height: 4px;
-	  background-color: #4c4949;
-	  overflow: hidden;
-	  border-radius: 2px;
-	  position: relative;
-	}
-  
-	.loading-bar-progress {
-	  width: 0;
-	  height: 100%;
-	  background-color: #ffffff; 
-	  animation: loading 2s infinite;
-	}
-  
-	@keyframes loading {
-	  0% {
-		width: 0;
-	  }
-	  50% {
-		width: 50%;
-	  }
-	  100% {
-		width: 100%;
-	  }
-	}
-  </style>
-  <script>
-	window.addEventListener("load", () => {
-	  const loadingBarContainer = document.getElementById("loading-bar-container");
-	  if (loadingBarContainer) {
-		loadingBarContainer.style.opacity = "0";
-		loadingBarContainer.style.transition = "opacity 0.5s ease";
-		setTimeout(() => {
-		  loadingBarContainer.style.display = "none";
-		}, 500); 
-	  }
-	});
-  </script>
- 
- 
+    #loading-bar-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loading-bar {
+        width: 80%;
+        height: 4px;
+        background-color: #4c4949;
+        overflow: hidden;
+        border-radius: 2px;
+        position: relative;
+    }
+
+    .loading-bar-progress {
+        width: 0;
+        height: 100%;
+        background-color: #ffffff;
+        animation: loading 2s infinite;
+    }
+
+    @keyframes loading {
+        0% {
+            width: 0;
+        }
+        50% {
+            width: 50%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+</style>
+
+<script>
+    window.addEventListener("load", () => {
+        const loadingBarContainer = document.getElementById("loading-bar-container");
+        if (loadingBarContainer) {
+            loadingBarContainer.style.opacity = "0";
+            loadingBarContainer.style.transition = "opacity 0.5s ease";
+            setTimeout(() => {
+                loadingBarContainer.style.display = "none";
+            }, 500);
+        }
+    });
+</script>

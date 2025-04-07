@@ -10,14 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.2",
+    "@astrojs/react": "^4.2.3",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.0.0",
     "@react-spring/web": "^9.7.5",
     "astro": "^5.4.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.6.3",
     "gl-matrix": "^3.4.3",
     "gsap": "^3.12.7",
+    "motion": "^12.6.3",
+    "tailwind-merge": "^3.2.0",
     "tailwindcss": "^3.3.3",
     "three": "^0.175.0"
   }
