@@ -85,7 +85,7 @@ export const ProductCard = ({ product, translate }) => {
     >
       <div className="block group-hover/product:shadow-2xl">
         <img
-          src={product.image} // Usar la imagen dinámica del producto
+          src={product.image} 
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />

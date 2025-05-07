@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import {
   motion,
   useScroll,
@@ -12,7 +12,7 @@ import {
 function useElementWidth(ref) {
   const [width, setWidth] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updateWidth() {
       if (ref.current) {
         setWidth(ref.current.offsetWidth);
